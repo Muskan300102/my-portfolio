@@ -23,7 +23,7 @@ export function Hero() {
         <div className="relative mx-auto grid min-h-[100svh] max-w-7xl grid-cols-1 content-end gap-6 px-4 pb-6 pt-24 sm:px-6 lg:grid-cols-12 lg:px-8 lg:pb-8 lg:pt-20">
           <p
             aria-hidden="true"
-            className="pointer-events-none absolute left-1/2 top-16 z-0 -translate-x-1/2 select-none font-display text-[28vw] font-semibold leading-none tracking-[-0.07em] text-white/25 lg:top-20 lg:text-[13rem]"
+            className="pointer-events-none absolute left-1/2 top-24 z-0 -translate-x-1/2 select-none font-display text-[30vw] font-semibold leading-none tracking-[-0.07em] text-white/35 lg:top-28 lg:text-[14rem]"
           >
             {personal.firstName.toUpperCase()}
           </p>
@@ -32,22 +32,14 @@ export function Hero() {
             I build intelligent applications through code, data, and AI. Simple systems. Real problems.
           </p>
 
-          <div className="relative z-10 mx-auto aspect-[4/5] w-full max-w-md sm:max-w-lg lg:col-span-6 lg:max-w-none lg:translate-y-6 lg:self-end">
+          <div className="relative z-10 mx-auto aspect-square w-[min(72vw,22rem)] overflow-hidden rounded-full ring-4 ring-white/80 shadow-[0_0_0_12px_rgba(27,42,74,0.45)] sm:w-96 lg:col-span-6 lg:w-[26rem] lg:self-center">
             <img
               src={personal.profileImage}
               alt={personal.profileAlt}
               width={923}
               height={1024}
               fetchPriority="high"
-              className="h-full w-full object-cover object-[center_18%] contrast-110 saturate-[0.92]"
-            />
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(to bottom, #1b2a4a 0%, rgba(27,42,74,0.55) 7%, rgba(27,42,74,0) 18%), linear-gradient(to top, #1b2a4a 0%, rgba(27,42,74,0) 22%), linear-gradient(to right, #1b2a4a 0%, rgba(27,42,74,0) 12%), linear-gradient(to left, #1b2a4a 0%, rgba(27,42,74,0) 12%), radial-gradient(ellipse at 50% 46%, transparent 52%, rgba(8,14,28,0.35) 100%)",
-              }}
+              className="h-full w-full object-cover object-[center_22%] contrast-110 saturate-[0.92]"
             />
           </div>
 
