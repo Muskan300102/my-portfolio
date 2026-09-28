@@ -3,6 +3,8 @@
  * Update the email, resume, photo, and site URL here — components read this file.
  */
 
+import { publicUrl } from "../utils/publicUrl"
+
 export const personal = {
   name: "Muskan Raghuvanshi",
   firstName: "Muskan",
@@ -20,9 +22,9 @@ export const personal = {
    * Used for canonical and Open Graph URLs when present.
    */
   siteUrl: "",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: publicUrl("/resume.pdf"),
   /** Portrait used in the hero. Swap the file in public/images if you update the photo. */
-  profileImage: "/images/profile.jpg",
+  profileImage: publicUrl("/images/profile.jpg"),
   profileAlt: "Portrait of Muskan Raghuvanshi",
   linkedin: "https://www.linkedin.com/in/muskan-raghuvanshi-47272127a/",
   github: "https://github.com/Muskan300102",

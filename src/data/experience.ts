@@ -1,4 +1,5 @@
 import type { TimelineEntry } from "../types"
+import { publicUrl } from "../utils/publicUrl"
 
 export const experience: TimelineEntry[] = [
   {
@@ -19,7 +20,7 @@ export const experience: TimelineEntry[] = [
     ],
     technologies: ["Python", "ETL", "Exploratory Data Analysis", "Reporting"],
     mark: "PI",
-    logo: "/logos/pie.svg",
+    logo: publicUrl("/logos/pie.svg"),
   },
   {
     id: "spinsci",
@@ -39,7 +40,7 @@ export const experience: TimelineEntry[] = [
     ],
     technologies: ["Data Analysis", "SQL", "Workflow Rules", "Technical Documentation"],
     mark: "SS",
-    logo: "/logos/spinsci.svg",
+    logo: publicUrl("/logos/spinsci.svg"),
   },
   {
     id: "savoka",
@@ -55,7 +56,7 @@ export const experience: TimelineEntry[] = [
     points: [],
     technologies: [],
     mark: "SV",
-    logo: "/logos/savoka.svg",
+    logo: publicUrl("/logos/savoka.svg"),
   },
 ]
 

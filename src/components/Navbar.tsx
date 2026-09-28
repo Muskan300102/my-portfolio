@@ -67,7 +67,7 @@ export function Navbar() {
           {navigation.map((item) => (
             <a
               key={item.id}
-              href={pathname === "/" ? `#${item.id}` : `/#${item.id}`}
+              href={pathname === "/" ? `#${item.id}` : `${import.meta.env.BASE_URL}#${item.id}`}
               onClick={(event) => {
                 if (pathname === "/") {
                   event.preventDefault()
@@ -140,7 +140,7 @@ export function Navbar() {
             {navigation.map((item) => (
               <li key={item.id}>
                 <a
-                  href={pathname === "/" ? `#${item.id}` : `/#${item.id}`}
+                  href={pathname === "/" ? `#${item.id}` : `${import.meta.env.BASE_URL}#${item.id}`}
                   className="flex min-h-11 items-center rounded-xl px-3 text-base"
                   onClick={(event) => {
                     if (pathname === "/") {

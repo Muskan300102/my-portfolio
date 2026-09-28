@@ -1,4 +1,5 @@
 import type { TimelineEntry } from "../types"
+import { publicUrl } from "../utils/publicUrl"
 
 export const education: TimelineEntry[] = [
   {
@@ -14,7 +15,7 @@ export const education: TimelineEntry[] = [
     points: [],
     technologies: ["Computer Science"],
     mark: "JIT",
-    logo: "/logos/jit.svg",
+    logo: publicUrl("/logos/jit.svg"),
   },
   {
     id: "pg-diploma-cdac",
@@ -32,6 +33,6 @@ export const education: TimelineEntry[] = [
     ],
     technologies: ["Big Data", "Artificial Intelligence", "Data Processing", "Analytics"],
     mark: "CD",
-    logo: "/logos/cdac.svg",
+    logo: publicUrl("/logos/cdac.svg"),
   },
 ]

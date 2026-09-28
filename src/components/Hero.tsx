@@ -1,4 +1,5 @@
 import { ArrowUpRight, Download } from "lucide-react"
+import { Link } from "react-router-dom"
 import { getCurrentRole } from "../data/experience"
 import { personal } from "../data/personal"
 import { projects } from "../data/projects"
@@ -50,8 +51,8 @@ export function Hero() {
             />
           </div>
 
-          <a
-            href={`/projects/${featured.slug}`}
+          <Link
+            to={`/projects/${featured.slug}`}
             className="relative z-10 w-full max-w-[220px] justify-self-start rounded-2xl bg-white p-2.5 text-neutral-950 shadow-sm lg:col-span-3 lg:mb-32 lg:justify-self-end lg:self-end"
           >
             <div className="overflow-hidden rounded-xl">
@@ -61,7 +62,7 @@ export function Hero() {
               <span>{featured.badge}</span>
               <span className="text-neutral-500">/ {featured.technologies[0]}</span>
             </p>
-          </a>
+          </Link>
 
           <div className="relative z-20 lg:col-span-8 lg:-mt-16">
             <p className="text-xs tracking-[0.12em] text-white/80">©{year}</p>
