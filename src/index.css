@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #121210;
+  --bg-soft: #1c1c18;
+  --surface: #23231e;
+  --ink: #f6f3ec;
+  --muted: #c9c1b4;
+  --faint: #9c9486;
+  --line: rgba(246, 243, 236, 0.14);
+  --accent: #ff8a6a;
+  --accent-strong: #ff5c39;
+  --cyan: #d6f25c;
+  --on-accent: #2a0e08;
+  --danger: #ff8fa3;
+  --glow: transparent;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #f4f4f2;
+  --bg-soft: #ececea;
+  --surface: #ffffff;
+  --ink: #111111;
+  --muted: #5c5c5c;
+  --faint: #8a8a8a;
+  --line: rgba(17, 17, 17, 0.1);
+  --accent: #e23c12;
+  --accent-strong: #ff4d1c;
+  --cyan: #111111;
+  --on-accent: #ffffff;
+  --danger: #b42318;
+  --glow: transparent;
+  color-scheme: light;
+}
+
+@theme inline {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-cyan: var(--cyan);
+  --color-on-accent: var(--on-accent);
+  --color-danger: var(--danger);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 40%, transparent);
+    color: var(--ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .drift,
+    .marquee-track {
+      animation: none !important;
+    }
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.drift {
+  animation: drift 14s ease-in-out infinite;
+}
+
+.drift-slow {
+  animation-duration: 18s;
+  animation-delay: -4s;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 80;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 0.7rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
