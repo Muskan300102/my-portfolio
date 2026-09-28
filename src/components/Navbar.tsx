@@ -54,7 +54,7 @@ export function Navbar() {
           "mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8",
           onHome
             ? scrolled
-              ? "bg-[#ff4d1c]/95 text-white backdrop-blur"
+              ? "bg-hero/95 text-white backdrop-blur"
               : "text-white"
             : "border-b border-line bg-surface/95 text-ink backdrop-blur",
         )}

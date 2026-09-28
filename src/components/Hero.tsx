@@ -17,7 +17,7 @@ export function Hero() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-[#ff4d1c] text-white">
+      <section className="relative overflow-hidden bg-hero text-white">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-70" style={{ backgroundImage: grid, backgroundSize: "96px 96px" }} />
 
         <div className="relative mx-auto grid min-h-[100svh] max-w-7xl grid-cols-1 content-end gap-6 px-4 pb-6 pt-24 sm:px-6 lg:grid-cols-12 lg:px-8 lg:pb-8 lg:pt-20">
@@ -46,7 +46,7 @@ export function Hero() {
               className="pointer-events-none absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(to bottom, #ff4d1c 0%, rgba(255,77,28,0.55) 7%, rgba(255,77,28,0) 18%), linear-gradient(to top, #ff4d1c 0%, rgba(255,77,28,0) 22%), linear-gradient(to right, #ff4d1c 0%, rgba(255,77,28,0) 12%), linear-gradient(to left, #ff4d1c 0%, rgba(255,77,28,0) 12%), radial-gradient(ellipse at 50% 46%, transparent 52%, rgba(90,18,0,0.28) 100%)",
+                  "linear-gradient(to bottom, #1b2a4a 0%, rgba(27,42,74,0.55) 7%, rgba(27,42,74,0) 18%), linear-gradient(to top, #1b2a4a 0%, rgba(27,42,74,0) 22%), linear-gradient(to right, #1b2a4a 0%, rgba(27,42,74,0) 12%), linear-gradient(to left, #1b2a4a 0%, rgba(27,42,74,0) 12%), radial-gradient(ellipse at 50% 46%, transparent 52%, rgba(8,14,28,0.35) 100%)",
               }}
             />
           </div>
